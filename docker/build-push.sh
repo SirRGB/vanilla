@@ -4,7 +4,7 @@
 # and push its BuildKit cache for use by the CI.
 #
 # The script assumes you have authenticated with `docker login ghcr.io`
-set -e
+set -euo pipefail
 
 if [ $# -ne 2 ]; then
     echo "Usage: $0 <os> <arch>   (e.g. linux x86_64)" >&2
