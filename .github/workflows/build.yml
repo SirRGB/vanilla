@@ -38,7 +38,7 @@ jobs:
         zip -9rX vanilla-ios.ipa Payload
 
     - name: Upload iOS Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ios
         path: vanilla-ios.ipa
@@ -83,7 +83,7 @@ jobs:
         ditto -c -k --keepParent "$GITHUB_WORKSPACE/build/bin/Vanilla.app" vanilla-macos-universal-unsigned.zip
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: macos universal unsigned
         path: vanilla-macos-universal-unsigned.zip
@@ -185,7 +185,7 @@ jobs:
         fi
 
     - name: Upload signed macOS artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: macOS signed and notarized
         path: vanilla-macos-universal.zip
